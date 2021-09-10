@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+<body>
+    <!-- Bai 1 -->
+    <form action="">
+        <div>
+            <label for="quantity1">User name</label>
+            <input type="text" class="quantity1" required>
+        </div>
+        <div>
+            <label for="quantity2">Passwword</label> 
+            <input type="password" class="quantity2" required>
+        </div>
+        <input type="submit" value="Sign in">
+    </form>
+
+    <!-- Bai 2 -->
+    <div class="vote-form">
+        <h2> VOTE FOR ...</h2>
+        <div>
+            <p>Username:
+                <input type="text"  id="username">
+                <br>    
+                I vote for:
+            </p>
+        </div>
+
+
+        <div>
+                <input type="radio" name="genre" value="Ella"/>Ella Fitzgerald
+                <br>
+                <input type="radio" name="genre" value="Herbie"/>Herbie Hancock
+                <br>
+                <input type="radio" name="genre" value="John"/>John Coltrance
+                <br>
+                <input type="radio" name="genre" value="Miles"/>Miles Davis
+                <br>
+                <input type="radio" name="genre" value="Thelonius"/>Thelonius Monk
+        </div>
+        <div>
+            <input type="Submit" name="Submit" onclick="myFunction()">
+        </div>
+        <br>
+        <p id="thankyou"></p>
+        
+    </div>
+    
+    <script type="text/javascript">
+        function myFunction(argument) {
+             let username = document.getElementById('username').value;
+             let voteFor= document.getElementsByName('genre');
+             console.log(voteFor)
+             for (let i = 0; i<voteFor.length; i++) {
+                 if(voteFor[i].checked){
+                     document.getElementById("thankyou").innerHTML = `Thank you, ${username}! You voted for ${voteFor[i].value}.` ;
+                 }
+             }
+             
+         } 
+     </script>
+    
+    
+    </body>
+    </html>
+            
+
+
+    
